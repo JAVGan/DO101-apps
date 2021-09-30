@@ -26,5 +26,8 @@ block content
               .panel-body
                p Current Temperature = #{weather.main.temp} !{units}, #{weather.weather[0].description}
                p Humidity = #{weather.main.humidity} &#37;
-               p Min = #{weather.main.temp_min} !{units}
-               p Max = #{weather.main.temp_max} !{units}
+               p Min = #{weather.main.temp_min} !{units.temp}
+               p Max = #{weather.main.temp_max} !{units.temp}
+               p Feels Like = #{weather.main.feels_like} !{units.temp}
+               br
+               p Wind Speed = #{weather.wind.speed} !{units.speed}
